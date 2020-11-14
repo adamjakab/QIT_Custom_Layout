@@ -1,17 +1,6 @@
 /**
   Main Style Sheet for Custom Layout
  */
-/** CUSTOM */
-html {
-  /*background: url(@bg-image) no-repeat center center fixed;*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-body {
-  background: none;
-}
 /** GLITCH */
 #wrapper .content {
   --color-text: #fff;
@@ -387,5 +376,19 @@ body {
     opacity: 0;
     transform: translate3d(0, 0, 0);
   }
+}
+/** CUSTOM */
+html {
+  /*background: url(@bg-image) no-repeat center center fixed;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  background: none;
+}
+#wrapper .content h2.content__title {
+  color: #e1e1e1;
 }
 /*# sourceMappingURL=style.css.map */

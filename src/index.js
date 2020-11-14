@@ -1,6 +1,6 @@
 // import _ from 'lodash';
 import imagesLoaded from 'imagesloaded';
-import "../JPRO_1/css/style.less";
+import "../JPRO_1/css/style.css";
 
 (function($) {
     function component() {
