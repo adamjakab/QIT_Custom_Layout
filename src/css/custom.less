@@ -33,10 +33,18 @@ body {
 
         #header {
           /*background: rgba(49, 61, 94, 0.7);*/
+          h2{
+            color: @color-title;
+          }
+          #headerparagraph{
+            color: @color-text-main;
+            font-weight: 300;
+          }
         }
 
         .warning-box{
           background: none;
+          border:none;
 
           #MainPart_divProgressbar {
             background-image: none;
@@ -57,10 +65,23 @@ body {
           background: none;
           #MainPart_divProgressbarBox_Holder{
             background: none;
+            color: @color-text-info;
           }
           #MainPart_ulProgressbarBox_Holder_Processbar{
             display:none;
           }
+          #MainPart_pProgressbarBox_Holder_Larger{
+            color: @color-text-main;
+          }
+          #MainPart_divProgressbarBox_Holder_LastUpdateTime{
+            color: @color-text-info;
+            font-size:12px;
+            font-weight: normal;
+          }
+        }
+
+        #MainPart_divTimeBox{
+          background: rgba(255, 255, 255, 0.5);
         }
 
 
@@ -84,19 +105,23 @@ body {
   }
 }
 
-/**
+#queueIdLinkModal{
+  #queueIdModal_Header{
+    background: @color-panel-bg;
+    .btn-close{
+      background: @color-main;
+    }
+    .btn-close:hover{
+      background: @color-inverse;
+    }
 
-
-#MainPart_divTimeBox{
-  background: rgba(49, 61, 94, 0.7);
-  margin:0;
-  padding: 5px;
+  }
+  #queueIdLinkModal_Body{
+    #copyToClipboardButton{
+      background: @color-main;
+    }
+  }
 }
-#middlepanel{
-  background: rgba(49, 61, 94, 0.7);
-  color: #94addc;
-}
-*/
 
 
 /* Whitelabel hack */
