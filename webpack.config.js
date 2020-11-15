@@ -42,6 +42,7 @@ module.exports = {
                 { from: "src/index.html", to: "index.html" },
                 { from: "src/css/style.css", to: "style.css" },
                 { from: "images/**/*", to: "[path][name].[ext]", context: "src/" },
+                { from: "html/**/*", to: "[path][name].[ext]", context: "src/" },
             ],
         }),
     ],

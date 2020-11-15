@@ -2,6 +2,7 @@
 @import url("variables.less");
 
 html {
+  background: @color-bg;
   /*background: url(@bg-image) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,60 +15,77 @@ body {
 }
 
 #wrapper{
-  .content {
-    .content__title {
-      color: @color-title;
+  background: none;
+  #main{
+    #main-top {
+      display: none;
     }
-    .content__text{
-      color: @color-text;
+
+    #main_t {display: none;}
+
+    #main_c {
+      background: none;
+      padding: 0;
+      border: 1px solid #ffffff;
+      #content {
+        background: @color-panel-bg;
+        margin: 0 0 -10px 0;
+
+        #header {
+          /*background: rgba(49, 61, 94, 0.7);*/
+        }
+
+        .warning-box{
+          background: none;
+
+          #MainPart_divProgressbar {
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            .progress {
+              background-image: none;
+              background-color: @color-main;
+              .runner {
+                background-image: none;
+              }
+            }
+          }
+        }
+
+
+        #MainPart_divProgressbarBox{
+          background: none;
+          #MainPart_divProgressbarBox_Holder{
+            background: none;
+          }
+          #MainPart_ulProgressbarBox_Holder_Processbar{
+            display:none;
+          }
+        }
+
+
+      }
+      #middlepanel {
+        position: relative;
+        background: @color-panel-bg;
+        width:100%;
+      }
+      #footer {
+        position: relative;
+        background: @color-panel-bg;
+        width: auto;
+        padding: 3px 10px;
+      }
+    }
+
+    #MainPart_divVersionInfo {
+      display:none;
     }
   }
 }
 
 /**
 
-#wrapper {
-    background: none;
-}
-
-#main #main-top {
-    display: none;
-}
-
-#main #main_c {
-    background: none;
-}
-
-#header {
-    background: rgba(49, 61, 94, 0.7);
-    color: #94addc;
-}
-
-#content .warning-box{
-    background: rgba(49, 61, 94, 0.7);
-}
-
-#MainPart_divProgressbar {
-
-background-image: none;
-background-color: rgba(0, 0, 0, 0.5);
-border: 1px solid rgba(0, 0, 0, 0.8);
-}
-
-#MainPart_divProgressbar .progress {
-  background-image: none;
-  background-color: rgba(148, 173, 220, 0.5);
-}
-#MainPart_divProgressbar .progress .runner {
-  background-image: none;
-}
-
-#MainPart_divProgressbarBox{
-  background: rgba(49, 61, 94, 0.7);
-}
-#MainPart_divProgressbarBox_Holder{
-  background: none;
-}
 
 #MainPart_divTimeBox{
   background: rgba(49, 61, 94, 0.7);

@@ -1,33 +1,27 @@
 /** GLITCH */
 @import url("variables.less");
 
-#wrapper{
-  .content {
-    --color-text: #fff;
-    --color-bg: #000;
-    --color-link: #f9d77e;
-    --color-link-hover: #fff;
-    --color-info: #efc453;
-    --glitch-width: 100vw;
-    --glitch-height: 100vh;
-    --gap-horizontal: 10px;
-    --gap-vertical: 5px;
-    --time-anim: 4s;
-    --delay-anim: 2s;
-    --blend-mode-1: none;
-    --blend-mode-2: none;
-    --blend-mode-3: none;
-    --blend-mode-4: none;
-    --blend-mode-5: overlay;
-    --blend-color-1: transparent;
-    --blend-color-2: transparent;
-    --blend-color-3: transparent;
-    --blend-color-4: transparent;
-    --blend-color-5: #af4949;
-  }
+.glitch_container {
+  --glitch-width: 100vw;
+  --glitch-height: 100vh;
+  --gap-horizontal: 10px;
+  --gap-vertical: 5px;
+  --time-anim: 8s;
+  --delay-anim: 2s;
+  --blend-mode-1: none;
+  --blend-mode-2: none;
+  --blend-mode-3: none;
+  --blend-mode-4: none;
+  --blend-mode-5: overlay;
+  --blend-color-1: transparent;
+  --blend-color-2: transparent;
+  --blend-color-3: transparent;
+  --blend-color-4: transparent;
+  --blend-color-5: #1b232a;
 }
 
 
+/*
 .imgloaded .content__title,
 .imgloaded .content__text {
   animation-name: glitch-anim-text;
@@ -56,6 +50,7 @@
   animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
 }
 
+
 @media screen and (max-width: 55em) {
   .content__text {
     position: relative;
@@ -66,6 +61,7 @@
     text-align: center;
   }
 }
+*/
 
 /* Glitch styles */
 .glitch {

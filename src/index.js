@@ -3,50 +3,25 @@
 import imagesLoaded from 'imagesloaded';
 
 (function($) {
-    function component() {
-        const element = document.createElement('div');
 
-        // Lodash, currently included via a script, is required for this line to work
-        element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    function setupGlitchContainer() {
+        //const $wrapper = $('#wrapper');
+        let $glitchContainer = $('<div class="glitch_container loading"></div>');
 
-        return element;
+        $("body").children().first().before($glitchContainer);
+        let $glitchDiv = $('<div class="glitch"></div>');
+        $glitchContainer.append($glitchDiv);
+        for (let i=1; i<=5; i++) {
+            $glitchDiv.append($('<div class="glitch__img"></div>'));
+        }
+        imagesLoaded('.glitch__img', { background: true }, () => {
+            $glitchContainer.removeClass("loading").addClass("imgloaded")
+        });
     }
 
     $(document).ready(function() {
         console.log("JQ READY");
-        document.body.classList.add('loading');
-
-        setTimeout(() => document.body.classList.add('render'), 60);
-        const navdemos = Array.from(document.querySelectorAll('nav.demos > .demo'));
-        const total = navdemos.length;
-        const current = navdemos.findIndex(el => el.classList.contains('demo--current'));
-        const navigate = (linkEl) => {
-            document.body.classList.remove('render');
-            document.body.addEventListener('transitionend', () => window.location = linkEl.href);
-        };
-        navdemos.forEach(link => link.addEventListener('click', (ev) => {
-            ev.preventDefault();
-            navigate(ev.target);
-        }));
-        document.addEventListener('keydown', (ev) => {
-            const keyCode = ev.keyCode || ev.which;
-            let linkEl;
-            if ( keyCode === 37 ) {
-                linkEl = current > 0 ? navdemos[current-1] : navdemos[total-1];
-            }
-            else if ( keyCode === 39 ) {
-                linkEl = current < total-1 ? navdemos[current+1] : navdemos[0];
-            }
-            else {
-                return false;
-            }
-            navigate(linkEl);
-        });
-
-        imagesLoaded('.glitch__img', { background: true }, () => {
-            document.body.classList.remove('loading');
-            document.body.classList.add('imgloaded');
-        });
+        setupGlitchContainer();
 
     });
 })(jQuery);

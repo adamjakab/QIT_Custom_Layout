@@ -35,8 +35,9 @@
           type='text/css'/><![endif]-->
 
     <!-- BEGIN: Custom User CSS is inserted at this point -->
-    <link rel='stylesheet' href='css/style.css' type='text/css'/>
+    <link rel='stylesheet' href='style.css' type='text/css'/>
     <!-- END: Custom User CSS is inserted at this point -->
+
 
     <script>
         (function () {
@@ -66,6 +67,7 @@
             src="//assets.queue-it.net/static/QueueFront/Script/combined/queueit_7148c2b9cee5f9aa4aba679caee54e43.js"
             integrity="sha384-ZZgTG0ns4cdaYxu5FEX6MMescMFdF8VWcxACDXlG0XVPLUr7g4pHEpKOgtR5JcBr"
             crossorigin="anonymous"></script>
+
     <script>
         window.QueueIt || document.write('<script src="' + getScriptBasePath() + 'queueit.js' + '"><\/script>');
 
@@ -113,19 +115,19 @@
                     "queueNumber": null,
                     "whichIsIn": "4 minutes",
                     "expectedServiceTime": null,
-                    "usersInLineAheadOfYou": null,
+                    "usersInLineAheadOfYou": 123,
                     "lastUpdated": "10:26:04 AM",
-                    "progress": 0.75,
+                    "progress": 0.33,
                     "timeZonePostfix": "GMT",
-                    "expectedServiceTimeUTC": "2020-11-14T10:31:04.3479169Z",
+                    "expectedServiceTimeUTC": "2099-10-15T10:30:00Z",
                     "customUrlParams": null,
                     "sdkVersion": null,
                     "windowStartTimeUTC": null,
                     "windowStartTime": "",
                     "secondsToStart": 480,
-                    "usersInQueue": 0,
+                    "usersInQueue": 99998,
                     "eventStartTimeFormatted": "10:57 AM",
-                    "eventStartTimeUTC": "2020-11-14T10:57:00Z"
+                    "eventStartTimeUTC": "2099-10-15T11:30:00Z"
                 },
                 "message": {
                     "header": "Message last updated:",
@@ -143,14 +145,14 @@
                     "header": "You are now in line",
                     "body": "You are in line for My Layout Test Event.  When it is your turn, you will have 10 minutes to enter the website.",
                     "disclaimerText": null,
-                    "styleSheets": "\u003Clink rel=\u0027stylesheet\u0027 href=\u0027//assets.queue-it.net/static/QueueFront/css/combined/style_ced9f4a6fb6df4c31d0c863af18a3300.css\u0027 type=\u0027text/css\u0027 /\u003E\u003C!--[if lte IE 7]\u003E\u003Clink rel=\u0027stylesheet\u0027 href=\u0027//assets.queue-it.net/static/QueueFront/css/combined/ie_9b8e0476ed11438548f82f973a454da3.css\u0027 type=\u0027text/css\u0027 /\u003E\u003C![endif]--\u003E\u003Clink rel=\u0027stylesheet\u0027 href=\u0027//queueit-company.s3.amazonaws.com/adjatest/userdata/css/queue-page.css\u0027 type=\u0027text/css\u0027 /\u003E",
+                    "styleSheets": "\u003Clink rel=\u0027stylesheet\u0027 href=\u0027//assets.queue-it.net/static/QueueFront/css/combined/style_ced9f4a6fb6df4c31d0c863af18a3300.css\u0027 type=\u0027text/css\u0027 /\u003E\u003C!&#45;&#45;[if lte IE 7]\u003E\u003Clink rel=\u0027stylesheet\u0027 href=\u0027//assets.queue-it.net/static/QueueFront/css/combined/ie_9b8e0476ed11438548f82f973a454da3.css\u0027 type=\u0027text/css\u0027 /\u003E\u003C![endif]&#45;&#45;\u003E\u003Clink rel=\u0027stylesheet\u0027 href=\u0027//queueit-company.s3.amazonaws.com/adjatest/userdata/css/queue-page.css\u0027 type=\u0027text/css\u0027 /\u003E",
                     "javascripts": ["//queueit-company.s3.amazonaws.com/adjatest/userdata/js/queue-page.js"],
-                    "logoSrc": "./logo.png",
+                    "logoSrc": "images/logo.png",
                     "toppanelIFrameSrc": "",
                     "sidepanelIFrameSrc": "",
                     "leftpanelIFrameSrc": "",
                     "rightpanelIFrameSrc": "",
-                    "middlepanelIFrameSrc": "./middle.html",
+                    "middlepanelIFrameSrc": "html/middle.html",
                     "bottompanelIFrameSrc": "",
                     "faviconUrl": "//queueit-company.s3.amazonaws.com/static/QueueFront/static/Content/Images/queue-it.ico",
                     "languages": [],
@@ -220,7 +222,7 @@
     </script>
 
     <!-- BEGIN: Custom User JS is inserted at this point -->
-    <script type='text/javascript' src='queue-page.js'></script>
+    <script type='text/javascript' src='custom_layout.bundle.js'></script>
     <!-- END: Custom User JS is inserted at this point -->
 
     <style>
@@ -539,6 +541,7 @@
         </div>
     </div>
 </div>
+
 <div id="toppanel" style="display: none;" data-bind="visible: layout.topPanelVisible">
     <iframe id='toppanel_iframe' src='' allowtransparency='true' frameborder='0' scrolling='no'
             data-bind="iframe-src-attr: { src: texts.toppanelIFrameSrc }"></iframe>
@@ -551,6 +554,7 @@
     </div>
 
     <div id="main">
+
         <div id="main-top">
             <div id="language-selector" title="select display language" style="display: none;"
                  data-bind="visible: languageSelector.languages().length > 1 && languageSelector.languageSelectorVisible">
@@ -566,180 +570,24 @@
         </div>
 
         <div id="main_t" class="t"></div>
+
         <div id="main_c" class="c">
-            <div id="content">
-                <div id="header">
-                    <h1 class="logo" data-bind="visible: layout.logoVisible">
-                        <img src="//queueit-company.s3.amazonaws.com/adjatest/userdata/images/logos/JPROPro-Metal-Logo.png"
-                             id="imgCustomerLogo" alt="logo" longdesc="company logo for ADJATEST Inc."
-                             data-bind="attr: { src: texts.logoSrc }"/>
-                    </h1>
-                    <h2>
-                        <span id="lbHeaderH2" data-bind="html: texts.header">You are now in line</span>
-                    </h2>
-                    <div id="headerparagraph">
-                        <span id="lbHeaderP" data-bind="html: texts.body">You are in line for My Layout Test Event.  When it is your turn, you will have 10 minutes to enter the website.</span>
-                    </div>
-                    <div id="whatisthis">
-                        <a id="hlThisIsQueueIt"
-                           href="https://queue-it.com/what-is-this.html?customerId=adjatest&amp;eventId=preview-layout&amp;queueId=00000000-0000-0000-0000-000000000000&amp;language=en-US&amp;preview=true"
-                           target="_blank" data-bind="attr: { href: texts.whatIsThisUrl }">What is this?</a>
-                    </div>
-                </div>
-                <div id="divConfirmRedirectModal" class="modal queueElement"
-                     data-bind="visible: showConfirmRedirectDialog()" style="display: none">
-                    <div id="divConfirmRedirectModal_Content" class="modal-content">
-                        <div class="modal-body">
-                            <h2 id="h2ConfirmRedirect">Your turn started at</h2>
-                            <h3 data-bind="{visible:ticket.windowStartTime()}">
-                                <span data-bind="{text:ticket.windowStartTime()}"></span>
-                                <span data-bind="{text:ticket.timeZonePostfix()}"></span>
-                            </h3>
-                            <p id="pConfirmRedirect">Please confirm that you want to proceed to the site as soon as
-                                possible</p>
-
-                            <button id="buttonConfirmRedirect" type="button" class="btn"
-                                    data-bind="click: setActiveClient"><span class="l">Yes, please</span><span
-                                    class="r">&nbsp;</span></button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="warning-box">
-
-                    <p class="beforeElement">
-                        <span id="MainPart_lbEventStartsAtText">The event will begin at:</span>
-                        <span id="MainPart_lbEventStartTime"
-                              data-bind="text: ticket.eventStartTimeFormatted">10:57 AM</span>
-                        <span id="MainPart_lbEventStartTimeTimeZonePostfix"
-                              data-bind="text: ticket.timeZonePostfix">GMT</span>
-                    </p>
-
-                    <div id="MainPart_divProgressbar" class="progressbar queueElement"
-                         data-bind="visible: layout.progressVisible">
-                        <div id="MainPart_divProgressbar_Progress" class="progress">
-                            <div id="MainPart_divProgressbar_Progress_Runner" class="runner"
-                                 data-bind="css: { paused: layout.queueIsPausedVisible }"></div>
-                        </div>
-                        <div id="MainPart_divProgressbar_Clear" class="clear"></div>
-                    </div>
-                </div>
-                <div id="MainPart_lbManualUpdateWarning" style="display: none" class="alert alert-error"
-                     data-bind="visible: !isRunning()">You have lost your connection to the line. Please check your
-                    internet connection.
-                </div>
-                <div id="MainPart_divProgressbarBox" data-bind="visible: isRunning()" class="processbar-box">
-                    <div id="MainPart_divProgressbarBox_Holder" class="holder">
-                        <!-- before/idle -->
-                        <div id="defaultCountdown" class="beforeElement"></div>
-                        <p class="larger beforeElement">
-                        <div id="MainPart_divUsersInQueueCount" style="display: none;"
-                             data-bind="visible: layout.usersInQueueVisible">
-                            <span id="MainPart_lbUsersInQueueCountText">Total number of users in line:</span>
-                            <span id="MainPart_lbUsersInQueueCount" data-bind="text: ticket.usersInQueue">0</span>
-                        </div>
-                        </p>
-
-                        <!-- queue -->
-                        <p id="MainPart_pProgressbarBox_Holder_Larger" class="larger queueElement">
-            <span style="display: none;" data-bind="visible: layout.queueNumberVisible">
-                <span id="MainPart_lbQueueNumberText">Your number in line:</span>
-                <span id="MainPart_lbQueueNumber" data-bind="text: ticket.queueNumber"></span>
-                <br id="MainPart_lbQueueNumberLineBreak"/>
-            </span>
-                            <span id="MainPart_lbUsersInLineAheadOfYouText" style="display: none;"
-                                  data-bind="visible: layout.usersInLineAheadOfYouVisible">Number of users in line ahead of you:</span>
-                            <span id="MainPart_lbUsersInLineAheadOfYou" style="display: none;"
-                                  data-bind="visible: layout.usersInLineAheadOfYouVisible, text: ticket.usersInLineAheadOfYou"></span>
-                            <span id="first-in-line" style="display: none;"
-                                  data-bind="visible: layout.firstInLineVisible">It is your turn</span>
-                            <br id="MainPart_lbUsersInLineAheadOfYouLineBreak"
-                                data-bind="visible: layout.usersInLineAheadOfYouVisible() || layout.firstInLineVisible()"/>
-                            <span id="MainPart_lbExpectedServiceTimeText" style="display: none;"
-                                  data-bind="visible: layout.expectedServiceTimeVisible">Expected arrival time on the website:</span>
-                            <span id="MainPart_lbExpectedServiceTime" style="display: none;"
-                                  data-bind="visible: layout.expectedServiceTimeVisible, text: ticket.expectedServiceTime"></span>
-                            <span id="MainPart_lbExpectedServiceTimeTimeZonePostfix" style="display: none;"
-                                  data-bind="visible: layout.expectedServiceTimeVisible, text: ticket.timeZonePostfix">GMT</span>
-                            <span id="queue-paused" style="display: none;"
-                                  data-bind="visible: layout.queueIsPausedVisible">The line is paused.</span>
-                            <br id="MainPart_lbExpectedServiceTimeLineBreak"
-                                data-bind="visible: layout.expectedServiceTimeVisible() || layout.queueIsPausedVisible()"/>
-                            <span id="serviced-soon" style="display: none;"
-                                  data-bind="visible: layout.servicedSoonVisible()">
-                <span data-bind="visible: !layout.servicedSoonDelayVisible()">Thank you for waiting. You are now being redirected to the website.</span>
-                <span data-bind="visible: layout.servicedSoonDelayVisible()">You&#x27;re almost there. You will be redirected to the website as soon as possible.</span>
-            </span>
-                            <span id="MainPart_lbWhichIsInText" data-bind="visible: layout.whichIsInVisible">Your estimated wait time is:</span>
-                            <span id="MainPart_lbWhichIsIn"
-                                  data-bind="visible: layout.whichIsInVisible, text: ticket.whichIsIn">4 minutes</span>
-                        </p>
-                        <ul id="MainPart_ulProgressbarBox_Holder_Processbar" class="processbar">
-                            <li id="defaultViewPb1"><span>&nbsp;</span></li>
-                        </ul>
-                        <div id="MainPart_divProgressbarBox_Holder_LastUpdateTime" data-bind="visible: isRunning">
-                            <span id="MainPart_lbLastUpdateTime"
-                                  title="Everything is fine, as long the &#x27;Status last updated&#x27; time is updated regularly.">Status last updated:</span>
-                            <span id="MainPart_lbLastUpdateTimeText"
-                                  data-bind="text: ticket.lastUpdated">10:26:04 AM</span>
-                            <span id="MainPart_lbLastUpdateTimeTextTimeZonePostfix"
-                                  data-bind="text: ticket.timeZonePostfix">GMT</span>
-                        </div>
-                    </div>
-                </div>
-                <div id="MainPart_divBlock" class="block beforeElement">
-                    <p></p>
-                </div>
-                <div id="MainPart_divTimeBox" class="time-box" style="display: none;"
-                     data-bind="visible: layout.dynamicMessageVisible() && message()">
-                    <div id="MainPart_divTimeBox_Holder" class="holder" data-bind="if: message">
-                        <div id="MainPart_divTimeBox_Holder_Frame" class="frame">
-                            <h2>
-                                <span id="MainPart_h2MessageOnQueueTicket" data-bind="text: message().header">Message last updated: </span>
-                                <span id="MainPart_h2MessageOnQueueTicketTimeText"
-                                      data-bind="text: message().timestampFormatted">10:26 AM</span>
-                                <span id="MainPart_h2MessageOnQueueTicketTimeTextTimeZonePostfix"
-                                      data-bind="text: message().timeZonePostfix">GMT</span>
-                            </h2>
-                            <p id="MainPart_pMessageOnQueueTicket" data-bind="creoleText: message().text">This is a test
-                                message.</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="MainPart_frmReminder2" name="Notify me" class="reminder-form queueElement"
-                     style="display: none;" data-bind="visible: layout.reminderVisible">
-                    <h2><span id="MainPart_lbNotyfyMeText">Please notify me when it is my turn:</span></h2>
-                    <div id="MainPart_divEmailInput" class="row" style="display: none;"
-                         data-bind="visible: layout.reminderEmailVisible">
-                        <form id="MainPart_FormEmailInput" name="Email notification form">
-                            <input name="ctl00$MainPart$inpEmailAddress" type="text" id="MainPart_inpEmailAddress"
-                                   title="Enter email address" class="item-input" placeholder="Enter email address"
-                                   data-bind="value: emailAddress"/>
-                            <button type="submit" class="btn" id="aUpdateEmail" data-bind="click: updateNotify"><span
-                                    class="l">Notify me by e-mail</span><span class="r">&nbsp;</span></button>
-                        </form>
-                        <div id="divEmailStatusFrame">
-                            <div id="divEmailStatus"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div id="MainPart_divExitLine" class="block queueElement">
-                    <p>
-                        <a href="https://adjatest.queue-it.net/exit/adjatest/preview-layout/5e216b76-520b-4f54-a537-c6e10b54a9c2/preview?previewid=0b618e10-e57c-49aa-b479-1db20bc4473a"
-                           id="MainPart_aExitLine">Leave the line</a> <span id="MainPart_lbExitLineLoseYourPlaceText">(You will lose your place)</span>
-                    </p>
-                </div>
-
+            <div id="content2">
+                THIS IS CONTENT 2
             </div>
+            <div id="content">
+                THIS IS CONTENT
+            </div>
+
+
+
             <div id="middlepanel" data-bind="visible: layout.middlePanelVisible">
                 <iframe id='middlepanel_iframe'
-                        src='./middle.html'
+                        src=''
                         allowtransparency='true' frameborder='0' scrolling='no'
                         data-bind="iframe-src-attr: { src: texts.middlepanelIFrameSrc }"></iframe>
             </div>
+
 
             <div id="footer">
                 <div id="footer-disclaimer" data-bind="html: texts.disclaimerText"></div>
