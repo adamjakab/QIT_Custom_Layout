@@ -4,7 +4,7 @@
 #Project
 node_modules/
 dist/
-#src/less/*.css
-#src/less/*.css.map
+src/less/*.css
+src/less/*.css.map
 package-lock.json
 
