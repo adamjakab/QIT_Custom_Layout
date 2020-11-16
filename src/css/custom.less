@@ -1,6 +1,11 @@
 /** CUSTOM */
 @import url("variables.less");
 
+/* Make sure logo is exported by Webpack */
+#___Logo___{
+  background: url(@image-logo);
+}
+
 html {
   background: @color-bg;
   /*background: url(@bg-image) no-repeat center center fixed;*/
@@ -32,7 +37,6 @@ body {
         margin: 0 0 -10px 0;
 
         #header {
-          /*background: rgba(49, 61, 94, 0.7);*/
           h2{
             color: @color-title;
           }
@@ -83,14 +87,17 @@ body {
         #MainPart_divTimeBox{
           background: rgba(255, 255, 255, 0.5);
         }
-
-
       }
+
       #middlepanel {
         position: relative;
         background: @color-panel-bg;
         width:100%;
+        #middlepanel_iframe{
+          width:100%;
+        }
       }
+
       #footer {
         position: relative;
         background: @color-panel-bg;

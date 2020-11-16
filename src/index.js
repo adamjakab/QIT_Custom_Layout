@@ -1,6 +1,8 @@
 // Other js modules
+import "./css/style.less";
 // import _ from 'lodash';
 import imagesLoaded from 'imagesloaded';
+
 
 (function($) {
 

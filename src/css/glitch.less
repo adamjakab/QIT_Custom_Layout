@@ -6,8 +6,8 @@
   --glitch-height: 100vh;
   --gap-horizontal: 10px;
   --gap-vertical: 5px;
-  --time-anim: 8s;
-  --delay-anim: 2s;
+  --time-anim: 4s;
+  --delay-anim: 1s;
   --blend-mode-1: none;
   --blend-mode-2: none;
   --blend-mode-3: none;
@@ -19,49 +19,6 @@
   --blend-color-4: transparent;
   --blend-color-5: #1b232a;
 }
-
-
-/*
-.imgloaded .content__title,
-.imgloaded .content__text {
-  animation-name: glitch-anim-text;
-  animation-duration: var(--time-anim);
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.content__title {
-  font-size: 12vw;
-  margin: 35vh 0 0 0;
-  position: relative;
-  font-family: 'Playfair Display', serif;
-  animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
-}
-
-.content__text {
-  font-family: 'IM Fell English', serif;
-  position: absolute;
-  font-size: 1.5em;
-  top: 4em;
-  right: 10vw;
-  max-width: 500px;
-  text-align: right;
-  font-weight: 400;
-  animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
-}
-
-
-@media screen and (max-width: 55em) {
-  .content__text {
-    position: relative;
-    right: auto;
-    top: auto;
-    font-size: 1.25em;
-    padding: 0 1em;
-    text-align: center;
-  }
-}
-*/
 
 /* Glitch styles */
 .glitch {
@@ -79,7 +36,7 @@
   left: calc(-1 * var(--gap-horizontal));
   width: calc(100% + var(--gap-horizontal) * 2);
   height: calc(100% + var(--gap-vertical) * 2);
-  background: url(@bg-image) no-repeat 50% 0;
+  background: url(@image-bg) no-repeat 50% 0;
   background-color: var(--blend-color-1);
   background-size: cover;
   transform: translate3d(0,0,0);
